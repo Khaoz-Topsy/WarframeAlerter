@@ -92,12 +92,12 @@ public class MainWindow extends JFrame implements ComponentListener
 	    setScrollBar(ItemInfo.getNumberItems());
 		
 		JMenuBar MenuBar = new JMenuBar();
-		JMenu File = new JMenu("File");
+//		JMenu File = new JMenu("File");
 		JMenu Update = new JMenu("Update");
 		JMenu Sort = new JMenu("Sort");
 		JMenu Email = new JMenu("Email");
 
-		File.add(Test);
+//		File.add(Test);
 //		File.addSeparator();
 		Update.add(AutoUpdate);
 		Update.add(SetFreq);
@@ -117,7 +117,7 @@ public class MainWindow extends JFrame implements ComponentListener
 		
 		SetupMenuBar();
 		
-		MenuBar.add(File);
+//		MenuBar.add(File);
 		MenuBar.add(Update);
 		MenuBar.add(Sort);
 		MenuBar.add(Email);

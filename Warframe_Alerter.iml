@@ -24,14 +24,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="sqljdbc4.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/sqljdbc4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>
