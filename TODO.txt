@@ -1,0 +1,10 @@
+Alad V Coords
+Search Infestations
+
+Save Alerts to Database
+		e.g.
+		MOD Name Date
+		BLUEPRINT Name Date
+		AURA Name Date
+		
+A program that reads those files
