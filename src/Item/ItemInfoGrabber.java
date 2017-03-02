@@ -212,26 +212,39 @@ public class ItemInfoGrabber
 			}
 			//Check if there are any new updates
 			
+//			AlertItems.clear();
+//			if(OldGuidTable.GetAlertSize() != 0)
+//			{
+//				if(!(GuidTable.EqualTo(OldGuidTable)))
+//				{	//TODO Alert User
+//					AlertItems = GuidTable.GetEmailAlerts();
+//					System.out.println(Temp);
+//				}
+
+//				if(!(OldAlertItems.equals(AlertItems)))
 			
-			if(IsRunning) 
-			{
-				AlertItems.clear();
-				if (IsNewAlerts()) 
+				if(IsRunning) 
 				{
-					HasChanged = true;
-				} 
-				else 
-				{
-					HasChanged = false;
+					AlertItems.clear();
+					if (IsNewAlerts()) 
+					{
+						HasChanged = true;
+					} 
+					else 
+					{
+						HasChanged = false;
+					}
 				}
-			}
-			else
-			{
-				IsRunning = true;
-			}
+				else
+				{
+					IsRunning = true;
+//					NewAlertItems = GuidTable.GetEmailAlerts();
+				}
+			
+//			OldGuidTable = GuidTable.Clone();
 		} 
-		catch (UnknownHostException ex) {System.out.println("Unable to reach Host");}
-		catch (IOException ex) {System.out.println("No internet Access");}
+		catch (UnknownHostException ex) {System.out.println("UnknownHostException");}
+		catch (IOException ex) {System.out.println("IOException");}
 		catch (Exception ex){System.out.println("Exception101");}
 	}
  	

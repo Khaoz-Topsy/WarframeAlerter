@@ -4,18 +4,16 @@ public class AlertItem
 {
 	private String Type = "N/A";
 	private String Title = "N/A";
-	private String GUID = "N/A";
 	
 	public AlertItem()
 	{
 		
 	}
 	
-	public AlertItem(String Type, String Title, String GUID)
+	public AlertItem(String Type, String Title)
 	{
 		this.Type = Type;
 		this.Title = Title;
-		this.GUID = GUID;
 	}
 	
 	
@@ -31,12 +29,6 @@ public class AlertItem
 	}
 	public void setTitle(String title) {
 		Title = title;
-	}
-	public String getGUID() {
-		return GUID;
-	}
-	public void setGUID(String guid) {
-		Title = guid;
 	}
 	
 	public boolean IsEqualTo(AlertItem Other) 

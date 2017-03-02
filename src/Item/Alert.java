@@ -35,15 +35,13 @@ public class Alert extends Item
 				
 		this.setInfo(title);
 		this.setDescrip(Description);
-		//this.setExpiry(Time);
+		this.setExpiry(Time);
 	}
 		
 	public String getPubDate() {return PubDate;}
 	public void setPubDate(String pubDate) {PubDate = pubDate;}
 	public String getFaction() {return Faction;}
 	public void setFaction(String faction) {this.Faction = faction;}
-	public String getExpiry() {return Expiry;}
-	public void setExpiry(String expiry) {Expiry = expiry;}
 	
 	
 }

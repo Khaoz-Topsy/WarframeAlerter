@@ -6,7 +6,6 @@ public class Information
 {
 	private String Money = "N/A";
 	private String Reward = "N/A";
-	private String RewardType = "N/A";
 	private String Location = "N/A";
 	private String Description = "N/A";
 	private String Time = "N/A";
@@ -30,10 +29,9 @@ public class Information
 		{
 			if(Current.contains("cr"))
 			{
-				String TempMoney = Current.substring(0, Current.length()-2);
-				if(isNumeric(TempMoney))
+				if(isNumeric(Current.substring(0, Current.length()-2)))
 				{
-					Money = TempMoney;					
+					Money = Current;					
 				}
 			}
 			
@@ -50,7 +48,6 @@ public class Information
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Mod";
-				RewardType = "Mod";
 				EmailAlert = true;
 			}
 			if(Current.contains("(Key)"))		
@@ -58,7 +55,6 @@ public class Information
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Key";
-				RewardType = "Key";
 				EmailAlert = true;
 			}
 			if(Current.contains("(Aura)"))			
@@ -66,7 +62,6 @@ public class Information
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Aura";
-				RewardType = "Aura";
 				EmailAlert = true;
 			}
 			if(Current.contains("(Item)"))			
@@ -74,26 +69,13 @@ public class Information
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Item";
-				RewardType = "Item";
 				EmailAlert = true;
 			}
-			if(Current.contains("(Blueprint)"))		
-			{
-				StringTokenizer RewardST = new StringTokenizer(Line,"-");
-				Reward = RewardST.nextToken();
-				if(!RewardType.equals("Vauban"))
-				{
-					EmailAlertType = "Blueprint";
-					RewardType = "Blueprint";
-				}
-				EmailAlert = true;
-			}
-			if(Current.contains("Vauban"))		
+			if(Current.contains("(Vauban)"))		
 			{
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Vauban";
-				RewardType = "Vauban";
 				EmailAlert = true;
 			}
 			if(Current.contains("(Resource)")) 		
@@ -101,7 +83,13 @@ public class Information
 				StringTokenizer RewardST = new StringTokenizer(Line,"-");
 				Reward = RewardST.nextToken();
 				EmailAlertType = "Resource";
-				RewardType = "Resource";
+				EmailAlert = true;
+			}
+			if(Current.contains("(Blueprint)"))		
+			{
+				StringTokenizer RewardST = new StringTokenizer(Line,"-");
+				Reward = RewardST.nextToken();
+				EmailAlertType = "Blueprint";
 				EmailAlert = true;
 			}
 
@@ -157,8 +145,6 @@ public class Information
 	public String getReward() {return Reward;}
 
 	public void setReward(String reward) {Reward = reward;}
-
-	public String getRewardType() {return RewardType;}
 
 	public String getLocation() {return Location;}
 

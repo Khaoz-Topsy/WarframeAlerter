@@ -230,7 +230,7 @@ public class HashTable implements iTable
 						if(Current.element().getItem().getInfo().isEmailAlert())
 						{
 //							System.out.println(Current.element().getItem().getTitle());
-							Result.add(new AlertItem(Current.element().getItem().getInfo().getEmailAlertType(), Current.element().getItem().getTitle(), Current.element().getItem().getGuid()));
+							Result.add(new AlertItem(Current.element().getItem().getInfo().getEmailAlertType(), Current.element().getItem().getTitle()));
 						}
 						Current = ItemEntryList.Next(Current);
 					}

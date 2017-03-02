@@ -60,10 +60,6 @@ public class LocationCheck
 		{
 			return true;
 		}
-		if(Location.toLowerCase().equals("(void)"))
-		{
-			return true;
-		}
 		
 		return false;
 	}
