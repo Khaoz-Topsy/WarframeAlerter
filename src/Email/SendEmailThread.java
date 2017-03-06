@@ -30,8 +30,8 @@ public class SendEmailThread implements Runnable
 	@Override
 	public void run()
 	{
-		final String username = //TODO put in gmail address;
-	    final String password = //TODO put in gmail password;
+		final String username = "TODO put in gmail address";
+		final String password = "TODO put in gmail password";
 	
 	    Properties props = new Properties();
 	    props.put("mail.smtp.starttls.enable", "true");
