@@ -1,6 +1,8 @@
 # WarframeAlerter
 Java GUI that grabs Warframe Alerts
 
+#Quick run
+### Look in the executables folder for a runnable jar and an exe
 
 # Installation
 ##Prerequisites
